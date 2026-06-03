@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import io.cucumber.java.PendingException;
 import io.cucumber.java.en.*;
 import utils.DriverFactory;
 import Pages.Loginpage;
@@ -17,10 +18,10 @@ public class Loginsteps {
         login.openLoginPage();
     }
 
-    @When("user enters username and password")
-    public void user_enters_username_and_password() {
-        login.enterUsername("standard_user");
-        login.enterPassword("secret_sauce");
+    @When("user enters username {string}and password {string}")
+    public void userEntersUsernameAndPassword(String username, String password) {
+        login.enterUsername(username);
+        login.enterPassword(password);
         login.clickLogin();
     }
 
@@ -28,4 +29,5 @@ public class Loginsteps {
     public void user_should_be_logged_in() {
         System.out.println("Login executed");
     }
+
 }
