@@ -1,5 +1,7 @@
 package api;
 
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import io.restassured.RestAssured;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -11,7 +13,8 @@ import java.util.Map;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.anyOf;
 import static org.hamcrest.Matchers.*;
-
+@Epic("API Automation")
+@Feature("JsonPlaceHolder API")
 public class JsonPlaceHolderApiTest {
 
     @BeforeClass

@@ -2,6 +2,8 @@ package runners;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import org.testng.annotations.DataProvider;
 
 @CucumberOptions(
@@ -15,8 +17,9 @@ import org.testng.annotations.DataProvider;
         },
         tags = "@regression"
 )
-
-public class TestRunner extends AbstractTestNGCucumberTests {
+@Epic("UI Automation")
+@Feature("SauceDemo E2E")
+public class CucumberRunnerTest extends AbstractTestNGCucumberTests {
         @Override
         @DataProvider(parallel = true)
         public Object[][] scenarios(){

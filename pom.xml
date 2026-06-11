@@ -81,6 +81,12 @@
             <version>5.4.0</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-java-commons</artifactId>
+            <version>2.29.1</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -92,7 +98,8 @@
                 <version>3.2.5</version>
                 <configuration>
                     <includes>
-                        <include>**/*Runner.java</include>
+                        <include>**/*CucumberRunnerTest.java</include>
+                        <include>**/*ApiTest.java</include>
                     </includes>
                 </configuration>
             </plugin>
