@@ -37,3 +37,14 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+# Allure
+allure-results/
+allure-results1/
+allure-report/
+
+# Logs
+*.log
+
+# IntelliJ module file
+*.iml
