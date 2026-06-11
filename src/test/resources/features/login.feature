@@ -1,3 +1,4 @@
+@regression
 Feature: Login
 
   Scenario Outline: Valid login

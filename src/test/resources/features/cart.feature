@@ -1,3 +1,4 @@
+@regression
 Feature: Cart
 
   Scenario Outline: Verify item in Cart

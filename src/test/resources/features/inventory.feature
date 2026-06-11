@@ -1,3 +1,4 @@
+@regression
 Feature: Inventory
 
   Scenario Outline: Add Item to Cart

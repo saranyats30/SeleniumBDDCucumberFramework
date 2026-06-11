@@ -1,3 +1,4 @@
+@regression
 Feature: Checkout Overview
 
   Scenario Outline: Verify item in Cart
