@@ -1,5 +1,5 @@
 @regression
-Feature: Cart
+Feature: Checkout
 
   Scenario Outline: Verify item in Cart
     Given user is on login page
