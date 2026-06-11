@@ -14,5 +14,5 @@ Feature: Checkout Overview
     Then user validated the total amount "<amount>"
     Then user clicks finish button
     Examples:
-      | username      | password     | product             | firstname | lastname | postalcode |amount|
-      | standard_user | secret_sauce | Sauce Labs Backpack | Sara      | Bijin    | T2X3A5     |Total: $32.39|
+      | username      | password     | product             | firstname | lastname | postalcode | amount        |
+      | standard_user | secret_sauce | Sauce Labs Backpack | Sara      | Bijin    | T2X3A5     | Total: $32.39 |
