@@ -1,0 +1,12 @@
+Feature: Cart
+
+  Scenario Outline: Verify item in Cart
+    Given user is on login page
+    When user enters username "<username>"and password "<password>"
+    Then user should be logged in
+    When user adds item "<product>" to cart
+    And user clicks cart Icon
+    Then cart Page should display item "<product>"
+    Examples:
+      | username      | password     | product             |
+      | standard_user | secret_sauce | Sauce Labs Backpack |

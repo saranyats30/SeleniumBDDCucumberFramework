@@ -1,20 +1,26 @@
 package stepdefinitions;
 
+import Pages.InventoryPageObjects;
 import io.cucumber.java.PendingException;
 import io.cucumber.java.en.*;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import utils.DriverFactory;
-import Pages.Loginpage;
+import Actions.LoginActionPage;
 import org.openqa.selenium.WebDriver;
 
 public class Loginsteps {
 
     WebDriver driver;
-    Loginpage login;
+    LoginActionPage login;
+    InventoryPageObjects inventoryPageObjects;
 
     @Given("user is on login page")
     public void user_is_on_login_page() {
         driver = DriverFactory.getDriver(); // GET DRIVER HERE
-        login = new Loginpage(driver);
+        login = new LoginActionPage(driver);
+        inventoryPageObjects = new InventoryPageObjects();
+        PageFactory.initElements(driver, inventoryPageObjects);
         login.openLoginPage();
     }
 
@@ -27,7 +33,7 @@ public class Loginsteps {
 
     @Then("user should be logged in")
     public void user_should_be_logged_in() {
-        System.out.println("Login executed");
+        Assert.assertTrue(inventoryPageObjects.getAppLogo().isDisplayed());
     }
 
 }
