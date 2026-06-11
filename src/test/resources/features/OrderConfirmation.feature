@@ -1,7 +1,7 @@
 @regression
 Feature: Order Confirmation
 
-  Scenario Outline: Verify item in Cart
+  Scenario Outline: Verify order confirmation
     Given user is on login page
     When user enters username "<username>"and password "<password>"
     Then user should be logged in

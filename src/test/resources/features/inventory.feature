@@ -1,7 +1,7 @@
 @regression
 Feature: Inventory
 
-  Scenario Outline: Add Item to Cart
+  Scenario Outline: Verify inventory
     Given user is on login page
     When user enters username "<username>"and password "<password>"
     Then user should be logged in

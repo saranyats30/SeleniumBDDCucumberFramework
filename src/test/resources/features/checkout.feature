@@ -1,7 +1,7 @@
 @regression
 Feature: Checkout
 
-  Scenario Outline: Verify item in Cart
+  Scenario Outline: Verify checkout
     Given user is on login page
     When user enters username "<username>"and password "<password>"
     Then user should be logged in
